@@ -39,11 +39,18 @@ $result =mysqli_fetch_assoc($data);
         <div class="form">
 
 <input type="text" name="search"  class="textfield" placeholder="Search ID" 
-value="<?php if(isset($_POST['searchdate'])){ echo $result['ID']; } ?>">
+value="<?php if(isset($_POST['searchdate'])){ echo $result['ID']; } ?>"
+>
 
 
-<input type="text" name="name" class="textfield" placeholder="Employee Name" 
-value="<?php if(isset($_POST['searchdate'])){ echo $result['emp_name']; } ?>">
+<input type="text" name="name" class="textfield" placeholder="Student Name" 
+value="<?php 
+if(isset($_POST['searchdate']))
+{ 
+    echo $result['emp_name']; 
+} 
+?>
+">
 
 
 
